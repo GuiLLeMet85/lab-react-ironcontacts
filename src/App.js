@@ -5,9 +5,11 @@ import React, {useState} from 'react';
 
 function App() {
 
-  const arrContacts = [...ContactsData].slice(0, 5) 
-
-  const [contacts, useContacts ] = useState(arrContacts)
+  const [contacts, useContacts ] = useState(ContactsData.slice(0, 5))
+  
+  
+  // const [wonOscar, setWonOscar] = useState(true)
+  // const [wonEmmy, setWonEmmy] = useState(true)
 
     return (
     <div className='App'>
@@ -17,6 +19,8 @@ function App() {
                       <th>Picture</th>
                       <th>Name</th>
                       <th>Popularity</th>
+                      <th>Won an Oscar</th>
+                      <th>Won an Emmy</th>
             </tr>
           </table>  
           {contacts.map (elem => {
@@ -26,6 +30,10 @@ function App() {
                       <td><img src = {elem.pictureUrl} alt={elem.name} className="profilepict" /></td>
                       <td>{elem.name}</td>
                       <td>{elem.popularity}</td>
+                      <td></td>
+                      <td></td>
+
+         
                     </tr>
                 </table>
            )
