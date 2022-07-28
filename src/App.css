@@ -76,21 +76,43 @@ img.profilepict {
 .section-bt {
   padding: 2vh 2vw;
   margin-bottom: 4vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.action-bt {
-  background-color: green;
+button {
+  cursor: pointer;
+}
+
+.bt-contacts {
   padding: 1vh 1vw;
   border-radius: 5px;
   border: 1px black solid;
   color: white;
   font-size: 1.2rem;
   font-weight: 600;
+  min-width: 150px;
+  width: 200px;
+  margin: 1vh 2vw;
 }
 
-.action-bt:hover {
+.bt-contacts:hover {
   background-color: orangered;
 }
+
+.action-bt-green {
+  background-color: green;
+}
+
+.action-bt-blue {
+  background-color: blue;
+}
+
+.action-bt-grey {
+  background-color: grey;
+}
+
 
 
 

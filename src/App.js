@@ -15,13 +15,26 @@ function App() {
         arrContacts.push(randomContact)
         setContacts(arrContacts)
   } 
-  
+
+  const sortByName = () => {
+        let filterByName = [...contacts].sort((a, b) => a.name.localeCompare(b.name));
+        setContacts(filterByName);
+  }
+
+  const sortByPopularity = () => {
+        let filterByPopularity = [...contacts].sort((a, b) => b.popularity - a.popularity);
+        setContacts(filterByPopularity);
+  }
+
 
     return (
     <div className='App'>
       <h1>IronContacts</h1>
       <div className='section-bt'>
-      <buttton onClick={addRandomContact} className="action-bt">Add Random Contact</buttton>
+      <buttton onClick={addRandomContact} className="action-bt-green bt-contacts" backgroundColor="red">Add Random Contact</buttton>
+      <buttton onClick={sortByName} className="action-bt-blue bt-contacts">Sort by name</buttton>
+      <buttton onClick={sortByPopularity} className="action-bt-grey bt-contacts">Sort by popularity</buttton>
+
       </div>
       <table className='header-table'>
             <tr>
