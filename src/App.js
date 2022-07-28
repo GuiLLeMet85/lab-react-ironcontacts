@@ -54,8 +54,8 @@ function App() {
                             <td><img src = {elem.pictureUrl} alt={elem.name} className="profilepict" /></td>
                             <td>{elem.name}</td>
                             <td>{parseFloat(elem.popularity).toFixed(2)}</td>
-                            <td>{elem.wonOscar ? <tl>🏆</tl> : null}</td>
-                            <td>{elem.wonEmmy ? <tl>🏆</tl> : null}</td>
+                            <td>{elem.wonOscar ? "🏆" : null}</td>
+                            <td>{elem.wonEmmy ? "🌟" : null}</td>
                           </tr>
                       </table>
                   )

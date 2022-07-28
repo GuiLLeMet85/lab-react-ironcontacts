@@ -49,6 +49,7 @@ div.main-table {
   color: white;
   padding: 2vh 0vw;
   border-radius: 5px;
+  border: 4px #333 solid;
 }
 
 
@@ -94,7 +95,7 @@ button {
 .bt-contacts {
   padding: 1vh 1vw;
   border-radius: 5px;
-  border: 1px black solid;
+  border: 3px black solid;
   color: white;
   font-size: 1.2rem;
   font-weight: 600;
