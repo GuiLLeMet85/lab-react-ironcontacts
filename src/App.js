@@ -7,9 +7,6 @@ function App() {
 
   const [contacts, useContacts ] = useState(ContactsData.slice(0, 5))
   
-  
-  // const [wonOscar, setWonOscar] = useState(true)
-  // const [wonEmmy, setWonEmmy] = useState(true)
 
     return (
     <div className='App'>
@@ -25,15 +22,13 @@ function App() {
           </table>  
           {contacts.map (elem => {
               return (
-                <table>
+                <table key={elem.id}>
                     <tr>
                       <td><img src = {elem.pictureUrl} alt={elem.name} className="profilepict" /></td>
                       <td>{elem.name}</td>
-                      <td>{elem.popularity}</td>
-                      <td></td>
-                      <td></td>
-
-         
+                      <td>{parseFloat(elem.popularity).toFixed(2)}</td>
+                      <td>{elem.wonOscar ? <tl>🏆</tl> : null}</td>
+                      <td>{elem.wonEmmy ? <tl>🏆</tl> : null}</td>
                     </tr>
                 </table>
            )
